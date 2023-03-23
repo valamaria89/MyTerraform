@@ -45,4 +45,5 @@ steps:
     provider: 'azurerm'
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
+    commandOptions: '-var-file="dev.tfvars"' 
     environmentServiceNameAzureRM: '$(subscription)'
