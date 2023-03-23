@@ -66,9 +66,7 @@ module "storage_account_aml" {
   postfix = var.postfix
   env = var.environment
 
-  hns_enabled                         = false
-  firewall_bypass                     = ["AzureServices"]
-  firewall_virtual_network_subnet_ids = []
+
 
   tags = local.tags
 }
