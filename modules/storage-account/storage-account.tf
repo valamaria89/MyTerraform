@@ -4,6 +4,7 @@ data "http" "ip" {
   url = "https://ifconfig.me"
 }
 
+
 locals {
   safe_prefix  = replace(var.prefix, "-", "")
   safe_postfix = replace(var.postfix, "-", "")
@@ -11,7 +12,7 @@ locals {
 
 resource "azurerm_storage_account" "st" {
   name                     = "st${local.safe_prefix}${local.safe_postfix}${var.env}"
-  resource_group_name      = var.rg_name
+  resource_group_name      = "rg-${var.prefix}-${var.postfix}${var.env}"
   location                 = var.location
   account_tier             = "Standard"
   account_replication_type = "LRS"

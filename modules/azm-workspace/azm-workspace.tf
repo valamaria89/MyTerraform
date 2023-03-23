@@ -1,7 +1,7 @@
 resource "azurerm_machine_learning_workspace" "mlw" {
   name                    = "mlw-${var.prefix}-${var.postfix}${var.env}"
   location                = var.location
-  resource_group_name     = var.rg_name
+  resource_group_name     = "rg-${var.prefix}-${var.postfix}${var.env}"
   application_insights_id = var.application_insights_id
   key_vault_id            = var.key_vault_id
   storage_account_id      = var.storage_account_id
