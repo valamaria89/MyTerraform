@@ -28,7 +28,7 @@ module "resource_group" {
   postfix = var.postfix
   env = var.environment
 
-  tags = local.tags
+  tags = var.tags
 }
 
 # Azure Machine Learning workspace
@@ -51,7 +51,7 @@ module "aml_workspace" {
   enable_aml_computecluster = var.enable_aml_computecluster
   storage_account_name      = module.storage_account_aml.name
 
-  tags = local.tags
+  tags = var.tags
 }
 
 # Storage account
@@ -68,7 +68,7 @@ module "storage_account_aml" {
 
 
 
-  tags = local.tags
+  tags = var.tags
 }
 
 # Key vault
@@ -83,7 +83,7 @@ module "key_vault" {
   postfix = var.postfix
   env = var.environment
 
-  tags = local.tags
+  tags = var.tags
 }
 
 # Application insights
@@ -98,7 +98,7 @@ module "application_insights" {
   postfix = var.postfix
   env = var.environment
 
-  tags = local.tags
+  tags = var.tags
 }
 
 # Container registry
@@ -113,5 +113,5 @@ module "container_registry" {
   postfix = var.postfix
   env = var.environment
 
-  tags = local.tags
+  tags = var.tags
 }
