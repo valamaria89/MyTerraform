@@ -26,7 +26,7 @@ module "resource_group" {
 
   prefix  = var.prefix
   postfix = var.postfix
-  env = var.environment
+  env = var.env
 
   tags = var.tags
 }
@@ -41,7 +41,7 @@ module "aml_workspace" {
 
   prefix  = var.prefix
   postfix = var.postfix
-  env = var.environment
+  env = var.env
 
   storage_account_id      = module.storage_account_aml.id
   key_vault_id            = module.key_vault.id
@@ -64,7 +64,7 @@ module "storage_account_aml" {
 
   prefix  = var.prefix
   postfix = var.postfix
-  env = var.environment
+  env = var.env
 
 
 
@@ -81,7 +81,7 @@ module "key_vault" {
 
   prefix  = var.prefix
   postfix = var.postfix
-  env = var.environment
+  env = var.env
 
   tags = var.tags
 }
@@ -96,7 +96,7 @@ module "application_insights" {
 
   prefix  = var.prefix
   postfix = var.postfix
-  env = var.environment
+  env = var.env
 
   tags = var.tags
 }
@@ -111,7 +111,7 @@ module "container_registry" {
 
   prefix  = var.prefix
   postfix = var.postfix
-  env = var.environment
+  env = var.env
 
   tags = var.tags
 }

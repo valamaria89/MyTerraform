@@ -26,7 +26,7 @@ variable "postfix" {
   description = "Postfix for the module name"
 }
 
-variable "environment" {
+variable "env" {
   type        = string
   description = "Environment prefix"
 }
