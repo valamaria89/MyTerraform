@@ -36,7 +36,7 @@ steps:
     provider: 'azurerm'
     command: 'plan'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
-    commandOptions: '-var-file="dev.tfvars" -out=tfplan'
+    commandOptions: '-var-file="dev.tfvars" 
     environmentServiceNameAzureRM: '$(subscription)'
 
 - task: TerraformTaskV1@0
@@ -45,5 +45,4 @@ steps:
     provider: 'azurerm'
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
-    commandOptions: tfplan'
     environmentServiceNameAzureRM: '$(subscription)'
