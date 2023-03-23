@@ -23,7 +23,7 @@ steps:
     provider: 'azurerm'
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
-    backendServiceArm: 'Inmeta Consulting - BAA'
+    backendServiceArm: '$(subscription)'
     backendAzureRmResourceGroupName: '$(resourceGroup)'
     backendAzureRmStorageAccountName: '$(storageAccount)'
     backendAzureRmContainerName: '$(container)'
