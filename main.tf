@@ -11,7 +11,7 @@ terraform {
 
 
 module "resource_group" {
-  source = "modules/resourcegroup/resource-group"
+  source = "./modules/resourcegroups/resource-groups"
 
   location = var.location
 
@@ -25,7 +25,7 @@ module "resource_group" {
 # Azure Machine Learning workspace
 
 module "aml_workspace" {
-  source = "modules/aml-workspace"
+  source = "./modules/aml-workspace"
 
   rg_name  = module.resource_group.name
   location = module.resource_group.location
@@ -48,7 +48,7 @@ module "aml_workspace" {
 # Storage account
 
 module "storage_account_aml" {
-  source = "modules/storage-account"
+  source = "./modules/storage-account"
 
   rg_name  = module.resource_group.name
   location = module.resource_group.location
@@ -67,7 +67,7 @@ module "storage_account_aml" {
 # Key vault
 
 module "key_vault" {
-  source = "modules/key-vault"
+  source = "./modules/key-vault"
 
   rg_name  = module.resource_group.name
   location = module.resource_group.location
@@ -82,7 +82,7 @@ module "key_vault" {
 # Application insights
 
 module "application_insights" {
-  source = "modules/application-insights"
+  source = "./modules/application-insights"
 
   rg_name  = module.resource_group.name
   location = module.resource_group.location
@@ -97,7 +97,7 @@ module "application_insights" {
 # Container registry
 
 module "container_registry" {
-  source = "modules/container-registry"
+  source = "./modules/container-registry"
 
   rg_name  = module.resource_group.name
   location = module.resource_group.location
