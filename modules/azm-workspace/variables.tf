@@ -1,4 +1,10 @@
 // STANDARD VARIABLES
+variable "rg_name" {
+  type        = string
+  description = "resource group name"
+}
+
+
 variable "location" {
   type        = string
   description = "Location of the resource group"
