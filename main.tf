@@ -1,10 +1,22 @@
 # Resource group
 
 terraform {
-  backend "azurerm" {   
+      required_providers {
+        azurerm = {
+          source  = "hashicorp/azurerm"
+          version = "=2.48.0"
+        }
+      }
+    }
     
-  }
-}
+    provider "azurerm" {
+      features {}
+    }
+    
+    terraform {
+      backend "azurerm" {
+      }
+    }
 
 
 module "resource_group" {

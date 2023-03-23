@@ -15,7 +15,7 @@ steps:
 
 - task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@0
   inputs:
-    terraformVersion: 'latest'
+    terraformVersion: '0.14.11'
 
 - task: TerraformTaskV1@0
   displayName: terraform init
@@ -28,6 +28,7 @@ steps:
     backendAzureRmStorageAccountName: '$(storageAccount)'
     backendAzureRmContainerName: '$(container)'
     backendAzureRmKey: '$(tfstateFile)'
+    commandOptions: '-reconfigure'
 
 - task: TerraformTaskV1@0
   displayName: terraform plan -out=tfplan
