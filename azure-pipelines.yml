@@ -37,6 +37,7 @@ steps:
     command: 'plan'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
     commandOptions: '-out=tfplan'
+    varFile: 'variables/dev.tfvars'
     environmentServiceNameAzureRM: '$(subscription)'
 
 - task: TerraformTaskV1@0
