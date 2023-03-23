@@ -23,7 +23,7 @@ module "resource_group" {
   source = "./modules/resourcegroups"
 
   location = var.location
-
+  rg_name = var.rg_name
   prefix  = var.prefix
   postfix = var.postfix
   env = var.env
