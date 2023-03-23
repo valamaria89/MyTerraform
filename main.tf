@@ -2,10 +2,7 @@
 
 terraform {
   backend "azurerm" {   
-    resource_group_name  = "rg-ml-testing-mgmt"	
-    storage_account_name = "stvalamgmgt001"
-    container_name       = "state"
-    key                  = "terraform.tfstate"
+    
   }
 }
 
