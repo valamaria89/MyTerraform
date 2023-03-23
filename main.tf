@@ -11,7 +11,7 @@ terraform {
 
 
 module "resource_group" {
-  source = "./modules/resourcegroups/resource-groups"
+  source = "./modules/resourcegroups"
 
   location = var.location
 
@@ -25,7 +25,7 @@ module "resource_group" {
 # Azure Machine Learning workspace
 
 module "aml_workspace" {
-  source = "./modules/aml-workspace"
+  source = "./modules/azm-workspace"
 
   rg_name  = module.resource_group.name
   location = module.resource_group.location
